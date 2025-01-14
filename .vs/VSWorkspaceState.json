@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\css",
+    "\\script"
   ],
-  "SelectedNode": "\\C:\\Users\\steve\\Source\\Repos\\WebServicesPortfolio",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
