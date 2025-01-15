@@ -1,8 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 4rem 0 0 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Prevent the body from scrolling */
 }
 
 header {
@@ -10,6 +14,10 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav ul {
@@ -29,6 +37,36 @@ nav ul {
 
 main {
     padding: 2rem;
+    margin-top: 4rem; /* Adjust based on header height */
+    margin-bottom: 8rem; /* Adjust based on footer height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    flex: 1;
+}
+
+.responsive-image {
+    width: 100%; /* Make the image take up the full width of its parent container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.weather-section {
+    display: inline-block;
+    border: 2px solid #333;
+    padding: 1rem;
+    margin-top: 1rem;
+    max-width: 100%; /* Ensure the section does not exceed the width of its content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.image-container {
+    width: 20%; /* Set the width of the container to 20% */
+    border: 2px solid #333;
+    display: block; /* Ensure the container takes up the full width and starts on a new line */
+}
+
+.weather-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 footer {
@@ -39,4 +77,5 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 1000;
 }
