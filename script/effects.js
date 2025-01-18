@@ -11,9 +11,9 @@ function getWeather() {
             const windSpeedKmh = weather.windspeed;
             const windSpeedMph = windSpeedKmh * 0.621371;
             const weatherResult = document.getElementById('weatherResult');
-            const weatherDescription = getWeatherDescription(weather.weathercode);  
+            const weatherDescription = getWeatherDescription(weather.weathercode);
             weatherResult.innerHTML = `
-                <p>Temperature: ${temperatureFahrenheit.toFixed(2) }&deg;F</p>
+                <p>Temperature: ${temperatureFahrenheit.toFixed(2)}&deg;F</p>
                 <p>Wind Speed: ${windSpeedMph.toFixed(2)} mph</p>
                 <p>Weather: ${weatherDescription}</p>
             `;
@@ -58,15 +58,14 @@ function getWeatherDescription(weatherCode) {
     return weatherDescriptions[weatherCode] || 'Unknown weather code';
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav ul li a");
+    const body = document.body;
 
+  
 
+    
 
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('a');
-
-    links.forEach(link => {
         link.addEventListener('mouseover', function () {
             link.style.color = 'red';
             link.style.fontWeight = 'bold';
@@ -74,9 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         link.addEventListener('mouseout', function () {
             link.style.color = 'white';
-            link.style.fontWeight = 'normal';   
+            link.style.fontWeight = 'normal';
         });
     });
 });
-
-

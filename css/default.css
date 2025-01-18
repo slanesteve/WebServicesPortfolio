@@ -7,7 +7,9 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow: hidden; /* Prevent the body from scrolling */
+   
 }
+
 
 header {
     background-color: #1A74B9;
@@ -19,6 +21,7 @@ header {
     width: 100%;
     z-index: 1000;
 }
+
 
 nav ul {
     list-style: none;
